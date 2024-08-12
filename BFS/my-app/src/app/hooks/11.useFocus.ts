@@ -13,10 +13,10 @@ export function useFocus<T extends HTMLElement>() {
   };
 
   const callbackRef = useCallback((node: T) => {
-    if (ref.current) {
-      ref.current.removeEventListener('focus', onFocus);
-      ref.current.removeEventListener('blur', onBlur);
-    }
+      if (ref.current) {
+        ref.current.removeEventListener('focus', onFocus);
+        ref.current.removeEventListener('blur', onBlur);
+      }
 
     ref.current = node;
     
