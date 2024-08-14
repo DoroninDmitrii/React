@@ -22,9 +22,7 @@ export default function App() {
   }
 
   useEffect(() => {
-    console.log('1')
     if (count === 0) {
-    console.log('2')
     return () => clearInterval(id);
     }
   }, [count, id])
@@ -83,3 +81,34 @@ export default function App() {
 //     </>
 //   );
 // }
+
+
+// export default function App() {
+//   const [count, setCount] = useState(5);
+//   const [id, setId] = useState(0);
+
+//   const handleStart = () => {
+//     const idTimer = setInterval(() => {
+//       setCount((count) => count - 1);
+//     }, 1000)
+//     setId(idTimer);
+//   }
+
+//   useEffect(() => {
+//     if (count === 0) {
+//       clearInterval(id);
+//     }
+//   }, [count, id])
+
+//   // const handleStop = () => {
+//   // }
+
+//   return (
+//     <div>
+//       <div>{count}</div>
+    
+//     {count > 0 ? <button onClick={handleStart}>Start</button> : null}
+//     {/* <button onClick={handleStop}>Stop</button> */}
+//     </div>
+//   )
+// };
