@@ -1,0 +1,11 @@
+.starrating {
+  display: inline-flex;
+}
+
+.star {
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #ffc107;
+}
