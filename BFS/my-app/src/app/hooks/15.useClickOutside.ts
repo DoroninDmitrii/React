@@ -4,7 +4,7 @@ export const useClickOutside = (callback) => {
   const ref = useRef();
 
   const handleClick = (e) => {
-    if (ref.current && !ref.current .contains(e.target)) {
+    if (ref.current && !ref.current.contains(e.target)) {
       callback();
     }
   }
